@@ -3,6 +3,10 @@ import smtplib
 from email.message import EmailMessage
 app = Flask(__name__)
 
+@app.route('/')
+def welcome():
+    return "<h1>welcome</h1>"
+
 @app.route("/email", methods=['POST','GET'])
 def email():
 
@@ -21,3 +25,6 @@ def email():
             smtp.send_message(msg)
 
     return "email"
+
+if __name__ == "__main__":
+    app.run(threaded=True, port=5000)
