@@ -17,7 +17,7 @@ def email():
         smtp.login('marcuslam616@gmail.com','aA26761683')
         num = data.get('num')
 
-        for x in range(int(num)+1):
+        for x in range(int(num)):
             smtp.send_message(msg)
 
     return "email"
