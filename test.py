@@ -14,11 +14,11 @@ def email():
 
     msg = EmailMessage()
     msg['Subject'] = data.get('subject')
-    msg['From'] = 'marcuslam616@gmail.com'
+    msg['From'] = 'xxxxxx@gmail.com'
     msg['To'] = data.get('to')
     msg.set_content(data.get('content'))
     with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
-        smtp.login('marcuslam616@gmail.com','aA26761683')
+        smtp.login('xxxxxx@gmail.com','xxxxx')
         num = data.get('num')
 
         for x in range(int(num)):
